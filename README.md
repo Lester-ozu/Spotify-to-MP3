@@ -9,6 +9,8 @@ Spotify-to-Mp3 as it name suggest, it is a project of mine i created so i can tu
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 
+---
+
 ## Installation
 Step-by-step instructions on how to set up the project.
 1. Clone the repository
@@ -73,6 +75,8 @@ Step-by-step instructions on how to set up the project.
    cd server
    node server.js
    ```
+
+---
 
 ## Usage
 Login with Spotify and click the download button.
