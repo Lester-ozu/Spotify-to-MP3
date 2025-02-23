@@ -31,14 +31,41 @@ Step-by-step instructions on how to set up the project.
    ```javascript
    app.listen(YOUR_PORT_NUMBER, () => {
     console.log(`Server is running on http://localhost:YOUR_PORT_NUMBER`);
-    });
+   });
    ```
-9. Navigate back to client directory set up an .env file again for the frontend or set the ip directly into each file that needs modification
+8. Navigate back to client directory set up an .env file again for the frontend
    ```
    REACT_APP_DEFAULT_LH=localhost
    REACT_APP_LOCAL_IP={specific ip if you are trying to locally deploy it}
    REACT_APP_USE_LOCAL="true"
    ```
+   or set the ip directly into each file that needs modification
    ```javascript
-   
+   // Backend-API.js
+   const ip = process.env.REACT_APP_USE_LOCAL === "true" ? process.env.REACT_APP_DEFAULT_LH : process.env.REACT_APP_LOCAL_IP // Delete this line
+
+    const response = await fetch(`http://${ip}:5000/download`, { // Edit every fetch url replace "${ip}" with "localhost" or an IPv4 if you want to run it locally
+
+        method: "POST",
+        headers: { "Content-Type" : "application/json" },
+        body: JSON.stringify({ title, artist, playlistTitle : null}),
+    })
    ```
+   ```javascript
+   //Login.jsx
+   const REDIRECT_URL = `http://${ip}:5000/callback`; // replace "${ip}" with "localhost" or an IPv4 if you want to run it locally
+   ```
+
+9. To run the whole program, go to client directory and then build the frontend by:
+   ```
+   cd client
+   npm run build
+   ```
+   After that, go to server directory, run the server, and access the web program
+   ```
+   cd server
+   node server.js
+   ```
+
+## Usage
+Login with Spotify and click the download button.
