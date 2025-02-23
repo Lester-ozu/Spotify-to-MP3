@@ -1,0 +1,310 @@
+body{
+
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    background-color: hsla(0, 0%, 100%, 0.8);
+    background-color: #1C1C1C;
+}
+
+.playlistTitle, .author, .author, .musicNumber,
+.timeDuration, .musicTitle, .artist, .album, .musicTimeDuration{
+
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+}
+
+.title{
+
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.second-title{
+    
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.loading-icon{
+
+   text-align: center;
+}
+
+.login-container{
+
+    text-align: center;
+    margin-top: 70px;
+}
+
+.login-container button{
+
+    font-size: 2.5rem;
+    padding: 15px 30px;
+    background-color: hsl(141, 73%, 42%);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transform: scale(1.0);
+    transition: background-color 0.3s ease-out, border 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.login-container button:hover{
+
+    background-color: hsl(141, 100%, 59%);
+    border: 2px solid white;
+    transform: scale(1.05);
+}
+
+.container{
+
+    width: 800px;
+    max-width: 800px;
+    min-height: 30vh;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    background-color: hsl(0, 0%, 0%, 0.85);
+    box-shadow: 0px 0px 15px 10px hsl(0, 0%, 30%, 0.4);  
+    border: 2.5px solid white;
+    padding: 30px 0px;
+}
+
+.rowContainer{
+
+    min-width: 85%;
+    max-width: 85%;
+    height: auto;
+    gap: 10px;
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playlistContainer{
+    
+    min-width: 100%;
+    display: block;
+}
+
+.playlist{
+
+    position: relative;
+    background-color: hsla(0, 0%, 100%, 0.9);
+    min-width: 100%;
+    max-width: 100%;
+    height: 125px;
+    display: grid;
+    grid-template-columns: auto auto 1fr 1fr auto;
+    grid-template-rows: auto 50px 50px 50px auto;
+    grid-template-areas: 
+        "dropdown image title number download"
+        "dropdown image author duration download";
+    column-gap: 17px;
+    row-gap: 0px;
+    align-items: center;
+    padding: 7px 20px;
+    border-radius: 25px;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+}
+
+.dropDown{
+
+    grid-area: dropdown;
+    font-size: 3.5rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: text-shadow 0.2s ease-out, font-size 0.2s ease-out, transform 0.3s ease-out;
+}
+
+.dropDown.rotate{
+
+    transform: rotate(90deg);
+}
+
+.dropDown:hover{
+
+    text-shadow: 2px 2px 3px hsla(0, 0%, 0%, 0.3);
+    font-size: 4rem;
+}
+
+.playlistImg{
+
+    grid-area: image;
+    width: 100px;
+    border: 1px solid hsla(0, 0%, 0%, 0.3);
+    box-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.3);
+}
+
+.playlistTitle{
+    
+    max-width: 210px;
+    grid-area: title;
+    font-size: 1.8rem;
+    font-weight: bold;
+    align-self: start;
+    justify-self: start;
+}
+
+.author{
+
+    max-width: 200px;
+    grid-area: author;
+    font-size: 1.3rem;
+    align-self: end;
+    justify-self: start;
+}
+
+.musicNumber{
+
+    max-width: 200px;
+    grid-area: number;
+    font-size: 1.8rem;
+    font-weight: 600;
+    align-self: start;
+}
+
+.timeDuration{
+
+    max-width: 200px;
+    grid-area: duration;
+    font-size: 1.2rem;
+    align-self: end;
+}
+
+.downloadButton{
+
+    grid-area: download;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 1px solid transparent;
+    background-color: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: text-shadow 0.2s ease-out, font-size 0.2s ease-out, border 0.2s ease-out, background-color 0.2s ease-out;
+    padding: 20px 20px;
+}
+
+.downloadButton:hover{
+
+    border: 1px solid hsl(0, 0%, 0%, 0.85);
+    background-color: hsl(0, 0%, 0%, 0.85);
+    color: white;
+    text-shadow: 2px 2px 3px hsla(0, 0%, 0%, 0.3);
+    font-size: 2.5rem;
+}
+
+.musicContainer{
+
+    width: 80%;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    transform: translateY(-100px);
+    transition: transform 0.3s ease-out;
+}
+
+.musicContainer.slideDown{
+
+    transform: translateY(0px);
+}
+
+.musicTrack{
+
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    grid-template-rows: auto 46px 46px auto;
+    grid-template-areas: 
+        "image title album download"
+        "image artist duration download";
+    column-gap: 17px;
+    row-gap: 0px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.musicImg{  
+
+    grid-area: image;
+    width: 75px;
+    border: 1px solid hsla(0, 0%, 0%, 0.3);
+    box-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.3);
+    margin-left: 40px;
+}
+
+.musicTitle{
+
+    grid-area: title;
+    font-size: 1.3rem;
+    font-weight: bold;
+    align-self: start;
+    justify-self: start;
+    max-width: 210px;
+}
+
+.artist{
+
+    grid-area: artist;
+    font-size: 1.1rem;
+    align-self: end;
+    justify-self: start;
+    max-width: 200px;
+}
+
+.album{
+
+    grid-area: album;
+    font-size: 1.2rem;
+    font-weight: 600;
+    max-width: 200px;
+    align-self: start;
+}
+
+.musicTimeDuration{
+
+    grid-area: duration;
+    font-size: 1.3rem;
+    max-width: 200px;
+    align-self: end; 
+}
+
+.musicDownloadBtn {
+    grid-area: download;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border: 1px solid transparent;
+    background-color: transparent;  
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 28px;
+    padding: 13px 13px;
+    border-radius: 50px;
+    transition: text-shadow 0.2s ease-out, font-size 0.2s ease-out, border 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+.musicDownloadBtn:hover{
+
+    border: 1px solid hsl(0, 0%, 0%, 0.85);
+    background-color: hsl(0, 0%, 0%, 0.85);
+    color: white;
+    text-shadow: 2px 2px 3px hsla(0, 0%, 0%, 0.3);
+    font-size: 2.5rem;
+}

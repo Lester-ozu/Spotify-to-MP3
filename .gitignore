@@ -1,0 +1,14 @@
+# ignored files in client directory
+client/build/
+client/node_modules/
+client/.env
+
+# ignored files in server directory
+server/downloads/
+server/node_modules/
+server/.env
+server/yt-dlp.exe
+
+# Ignore system files
+.DS_Store
+Thumbs.db
