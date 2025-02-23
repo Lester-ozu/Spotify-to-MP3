@@ -2,6 +2,13 @@
 
 Spotify-to-Mp3 as it name suggest, it is a project of mine i created so i can turn my spotify playlist to mp3 and listen to it offline. In the initial page of this website, you will have to sign in with your spotify account so that we could fetch your playlist in your account. Unfortunately there's no feature yet that you could download a music track or playlist through links, will add that one later in the future.
 
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+
 ## Installation
 Step-by-step instructions on how to set up the project.
 1. Clone the repository
