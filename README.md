@@ -28,7 +28,7 @@ Step-by-step instructions on how to set up the project.
    PORT=YOUR_PORT_NUMBER
    ```
    or just edit the server.js file directly and set the port number there
-   ```
+   ```javascript
    app.listen(YOUR_PORT_NUMBER, () => {
     console.log(`Server is running on http://localhost:YOUR_PORT_NUMBER`);
     });
