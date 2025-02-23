@@ -5,9 +5,9 @@ Spotify-to-Mp3 as it name suggest, it is a project of mine i created so i can tu
 ## Installation
 Step-by-step instructions on how to set up the project.
 1. Clone the repository
-   `https://github.com/Lester-ozu/Spotify-to-MP3.git`
+   ```https://github.com/Lester-ozu/Spotify-to-MP3.git```
 2. Navigate to the project directory
-   `cd Spotify-to-MP3`
+   ```cd Spotify-to-MP3```
 3. Navigate to client directory and install dependencies for the frontend
    ```
    cd client
@@ -20,7 +20,7 @@ Step-by-step instructions on how to set up the project.
    npm install
    ```
 5. Make a .env file where you would put your port number 
-   `PORT=YOUR_PORT_NUMBER`
+   ```PORT=YOUR_PORT_NUMBER```
    or just edit the server.js file directly and set the port number there
    ```
    app.listen(YOUR_PORT_NUMBER, () => {
