@@ -5,29 +5,35 @@ Spotify-to-Mp3 as it name suggest, it is a project of mine i created so i can tu
 ## Installation
 Step-by-step instructions on how to set up the project.
 1. Clone the repository
-   ```https://github.com/Lester-ozu/Spotify-to-MP3.git```
-2. Navigate to the project directory
-   ```cd Spotify-to-MP3```
-3. Navigate to client directory and install dependencies for the frontend
+   ```
+   https://github.com/Lester-ozu/Spotify-to-MP3.git
+   ```
+3. Navigate to the project directory
+   ```
+   cd Spotify-to-MP3
+   ```
+5. Navigate to client directory and install dependencies for the frontend
    ```
    cd client
    npm install
    ```
-4. Next move back to the root directory and navigate to server directory and install dependencies for the backend
+6. Next move back to the root directory and navigate to server directory and install dependencies for the backend
    ```
    cd ..
    cd server
    npm install
    ```
-5. Make a .env file where you would put your port number 
-   ```PORT=YOUR_PORT_NUMBER```
+7. Make a .env file where you would put your port number 
+   ```
+   PORT=YOUR_PORT_NUMBER
+   ```
    or just edit the server.js file directly and set the port number there
    ```
    app.listen(YOUR_PORT_NUMBER, () => {
     console.log(`Server is running on http://localhost:YOUR_PORT_NUMBER`);
     });
    ```
-7. Navigate back to client directory set up an .env file again for the frontend or set the ip directly into each file that needs modification
+9. Navigate back to client directory set up an .env file again for the frontend or set the ip directly into each file that needs modification
    ```
    REACT_APP_DEFAULT_LH=localhost
    REACT_APP_LOCAL_IP={specific ip if you are trying to locally deploy it}
